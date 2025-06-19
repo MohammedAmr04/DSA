@@ -1,0 +1,38 @@
+This is binary search. You just learned your first algorithm! Here’s how 
+many numbers you can eliminate every time.
+---------------------------------------------------------------------
+
+Suppose you’re looking for a word in the dictionary. The dictionary has 
+240,000 words. In the worst case, how many steps do you think each 
+search will take?
+
+Simple search could take 240,000 steps if the word you’re looking for is 
+the very last one in the book. With each step of binary search, you cut 
+the number of words in half until you’re left with only one word.
+
+So binary search will take 18 steps—a big difference! In general, for any 
+list of n, binary search will take log2 n steps to run in the worst case, 
+whereas simple search will take n steps.
+---------------------------------------------------------------------
+
+Binary search only works when your list is in sorted order. For example,  
+the names in a phone book are sorted in alphabetical order.
+---------------------------------------------------------------------
+Running time:
+    Any time I talk about an algorithm, I’ll discuss its running time. 
+    Generally you want to choose the most efficient algorithm—
+    whether you’re trying to optimize for time or space.
+---------------------------------------------------------------------
+
+Back to binary search. How much time do you save by using 
+it? Well, the first approach was to check each number, one by 
+one. If this is a list of 100 numbers, it takes up to 100 guesses. 
+If it’s a list of 4 billion numbers, it takes up to 4 billion guesses. 
+So the maximum number of guesses is the same as the size of the list. This is 
+called linear time.
+---------------------------------------------------------------------
+
+Binary search is different. If the list is 100 items long, it takes at most 
+7 guesses. If the list is 4 billion items, it takes at most 32 guesses. 
+Powerful, eh? Binary search runs in logarithmic time (or log time, as 
+the natives call it).  Here’s a table summarizing our findings today.
