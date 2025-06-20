@@ -1,0 +1,37 @@
+What’s time complexity ?
+
+answer : Time Complexity describes how the runtime of an algorithm scales with the size of the input (n)
+
+Steps to analyze time complexity
+1- understand and break down the code:
+    read the code carefully and identify key components (loop, conditions, operations)
+    focus on repetitive operations like loops or recursive calls 
+
+2- count the iterations:
+    For each part, determine how many times operations are repeated relative to n (input size).
+    A single loop iterating n times contributes O(n).
+    Nested loops, each iterating n times, contribute O(n²)==> O(n * n).
+
+3- Identify the Dominant Operations:
+    Focus on the part of the code that takes the most time (usually loops or recursive calls).
+    Constant-time operations (e.g., simple arithmetic) are O(1) and often ignored if larger terms exist.
+
+4- Apply Big O Rules:
+    O(1): Constant time (e.g., accessing an array element by index).
+    O(n): Linear time (e.g., iterating through an array once).
+    O(n²): Quadratic time (e.g., nested loops).
+    O(log n): Logarithmic time (e.g., binary search).
+    O(n log n): Common in efficient sorting algorithms like Quick Sort or Merge Sort.
+
+5- Sum the Complexities:
+    Combine the complexities of different parts, but focus on the dominant term.
+    Example: A loop with O(n) and a constant operation O(1) results in O(n).
+
+6- Ignore Constants and Lower-Order Terms:
+    In Big O, constants are dropped (e.g., O(2n) becomes O(n)).
+    Lower-order terms are ignored (e.g., O(n² + n) becomes O(n²)).
+
+
+
+
+

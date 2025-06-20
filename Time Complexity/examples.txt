@@ -1,0 +1,120 @@
+Examples of Counting Time Complexity (in JavaScript):
+
+1. Single loop:
+```js
+for (let i = 0; i < n; i++) {
+    console.log(i);
+}
+// O(n): The loop runs n times, so the time grows linearly with n.
+```
+
+2. Nested loops:
+```js
+for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+        console.log(i, j);
+    }
+}
+// O(n^2): For each of the n iterations of the outer loop, the inner loop runs n times (n * n = n^2).
+```
+
+3. Two separate loops:
+```js
+for (let i = 0; i < n; i++) {
+    console.log(i);
+}
+for (let j = 0; j < n; j++) {
+    console.log(j);
+}
+// O(n): Each loop runs n times, but Big O ignores constants, so O(n + n) = O(n).
+```
+
+4. Logarithmic loop:
+```js
+for (let i = 1; i < n; i = i * 2) {
+    console.log(i);
+}
+// O(log n): i doubles each time, so the loop runs about log₂(n) times.
+```
+
+5. Loop with constant time operation:
+```js
+for (let i = 0; i < n; i++) {
+    console.log('Hello');
+}
+// O(n): The print operation is O(1), but the loop runs n times.
+```
+
+6. Loop with O(n) operation inside:
+```js
+for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+        console.log(i, j);
+    }
+}
+// O(n^2): The inner loop is O(n), and the outer loop is O(n), so total is O(n * n).
+```
+
+// More explanation and examples:
+
+// 7. Constant time example (O(1)):
+```js
+let arr = [1, 2, 3, 4, 5];
+console.log(arr[2]); // Accessing by index is O(1)
+// O(1): Accessing an array element by index takes the same time, no matter the size of the array.
+```
+
+// 8. Linear time with array search (O(n)):
+```js
+let arr = [1, 2, 3, 4, 5];
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 4) {
+        console.log('Found!');
+        break;
+    }
+}
+// O(n): In the worst case, you check every element once.
+```
+
+// 9. Quadratic time with nested loops of different sizes (O(n*m)):
+```js
+let arr1 = [1, 2, 3];
+let arr2 = ['a', 'b', 'c', 'd'];
+for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+        console.log(arr1[i], arr2[j]);
+    }
+}
+// O(n*m): Outer loop runs n times, inner loop runs m times for each n.
+```
+
+// 10. O(n log n) example (Merge Sort):
+// Merge Sort divides the array (log n times) and merges (n times per level)
+// Total: O(n log n): The array is split in half each time (log n), and merging takes O(n) at each level.
+
+// 11. Exponential time (O(2^n)):
+```js
+function fibonacci(n) {
+    if (n <= 1) return n;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+// O(2^n): Each call makes two more calls, so the number of calls doubles each time.
+```
+
+// 12. Space complexity example:
+// Time complexity is about speed, space complexity is about memory usage.
+```js
+let arr = [];
+for (let i = 0; i < n; i++) {
+    arr.push(i);
+}
+// O(n) space: The array grows with n, so memory usage increases linearly.
+```
+
+// Tips:
+// - Always look for the most repeated work (loops, recursion).
+// - Ignore constants and less significant terms in Big O.
+// - If you see nested loops, multiply their sizes.
+// - If you see sequential loops, add their complexities (but usually the largest dominates).
+// - Logarithmic time often comes from dividing the problem in half each step (binary search, some tree operations).
+
