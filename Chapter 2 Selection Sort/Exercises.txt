@@ -1,0 +1,29 @@
+## 2.1: Tracking Daily Expenses
+Suppose you’re building an app to keep track of your finances. Every day, you write down everything you spent money on. At the end of the month, you review your expenses and sum up how much you spent. So, you have lots of inserts and a few reads. Should you use an array or a list?
+
+**Answer:**
+A list is better. Lists are efficient for frequent insertions, especially when the number of items can grow unpredictably.
+
+---
+
+## 2.2: Restaurant Order Queue
+Suppose you’re building an app for restaurants to take customer orders. Your app needs to store a list of orders. Servers keep adding orders to this list, and chefs take orders off the list and make them. It’s an order queue: servers add orders to the back of the queue, and the chef takes the first order off the queue and cooks it. Would you use an array or a linked list to implement this queue?
+
+**Answer:**
+A linked list is better. Linked lists are efficient for insertions at the end and deletions at the beginning, which matches the queue behavior.
+
+---
+
+## 2.3: Facebook Username Search
+Suppose Facebook keeps a list of usernames. When someone tries to log in, a search is done for their username. If their name is in the list, they can log in. People log in often, so there are a lot of searches. Suppose Facebook uses binary search to search the list. Binary search needs random access—you need to be able to get to the middle of the list instantly. Would you implement the list as an array or a linked list?
+
+**Answer:**
+An array is better. Arrays provide fast random access, which is required for binary search.
+
+---
+
+## 2.4: Downsides of Arrays for Inserts
+People sign up for Facebook pretty often, too. Suppose you decided to use an array to store the list of users. What are the downsides of an array for inserts? In particular, suppose you’re using binary search to search for logins. What happens when you add new users to an array?
+
+**Answer:**
+Inserting a new user is expensive because you must keep the array sorted for efficient binary search. This may require shifting elements or resizing the array, both of which are costly operations.

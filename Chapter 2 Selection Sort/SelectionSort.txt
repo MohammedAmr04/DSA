@@ -1,0 +1,36 @@
+Selection Sort: An Introduction
+
+Selection sort is a fundamental algorithm for sorting lists. Before diving in, make sure you understand arrays, lists, and Big O notation.
+
+---
+
+**Real-World Example** Imagine you have a collection of music on your computer. For each artist, you know how many times you’ve played their songs. Suppose you want to sort your artists by play count, from most to least played.
+
+---
+
+**How Selection Sort Works**
+
+1. Go through the list and find the artist with the highest play count.
+2. Add that artist to a new (sorted) list.
+3. Remove the artist from the original list.
+4. Repeat steps 1–3 until all artists are sorted.
+
+---
+
+**Time Complexity Analysis**
+
+- Finding the highest play count requires checking every artist: O(n) time.
+- You repeat this process n times (once for each artist).
+- Total time: O(n) × n = O(n²).
+
+---
+
+**Where Sorting Algorithms Are Useful**
+
+- Sorting names in a phone book
+- Arranging travel dates
+- Ordering emails (newest to oldest)
+
+---
+
+**Summary** Selection sort is simple and easy to understand, but not very fast for large lists. More efficient algorithms, like quicksort (O(n log n)), exist and will be covered soon.

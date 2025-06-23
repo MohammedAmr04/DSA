@@ -1,0 +1,46 @@
+# How Memory Works
+
+## The Drawer Analogy
+Imagine you go to a show and need to check your things. There’s a chest of drawers, and each drawer can hold one item. If you want to store two things, you ask for two drawers and store your items there.
+
+This is similar to how your computer’s memory works:
+- The computer’s memory is like a giant set of drawers.
+- Each drawer has an address.
+- When you want to store something, you ask for space, and the computer gives you an address.
+
+---
+
+## Storing Multiple Items: Arrays vs. Lists
+When you need to store multiple items, there are two basic ways:
+- **Arrays**
+- **Linked Lists**
+
+### Arrays
+- Store elements in contiguous memory locations.
+- Provide fast, random access (O(1)) to any element by index.
+- Insertion and deletion can be slow (O(n)), especially in the middle, because elements may need to be shifted.
+- If there’s no space, you might have to copy everything to a new location.
+- Best when you need fast read access and the data size is fixed or predictable.
+
+### Linked Lists
+- Store elements as nodes, each with a pointer to the next node.
+- Only allow sequential access (O(n)); to reach the 10th element, you must follow links from the first.
+- Insertion and deletion are fast (especially at the beginning or middle), as you only need to change pointers.
+- Useful when you expect frequent insertions or deletions and don’t need constant-time access.
+
+---
+
+## Inserting Elements: Which is Better?
+- **Inserting in the middle:**
+  - Lists are better; just change pointers.
+  - Arrays require shifting elements and possibly copying to a new location if there’s no space.
+
+---
+
+## Access Patterns: Random vs. Sequential
+- **Random Access:**
+  - You can jump directly to any element (arrays).
+- **Sequential Access:**
+  - You must read elements one by one from the start (linked lists).
+
+Arrays are often used because they allow random access, making them faster for reads.
