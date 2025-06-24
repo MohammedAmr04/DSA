@@ -4,7 +4,7 @@ function search(key, sortedArray) {
     high = sortedArray.length - 1,
     mid;
   while (low <= high) {
-    mid = Math.round((low + high) / 2);
+    mid = Math.floor((low + high) / 2);
     if (key === sortedArray[mid]) {
       return mid + 1;
     }
